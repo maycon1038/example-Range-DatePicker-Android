@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyRangeDatePicker</string>
+    <string name="but_ok">OK</string>
+    <string name="but_cancel">CANCEL</string>
+    <string name="title_tab_start_date">Start Date</string>
+    <string name="ttile_tab_end_date">End Date</string>
+</resources>
