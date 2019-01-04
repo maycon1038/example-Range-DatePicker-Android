@@ -37,15 +37,13 @@ in your onCreate instance DateRangePickerFragment
 
       @Override
     public void onDateRangeSelected(int startDay, int startMonth, int startYear, int endDay, int endMonth, int endYear) {
-       #work your method here
+       //work your method here
          DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault());
         Calendar  c = Calendar.getInstance();
         Calendar c2 = Calendar.getInstance();
         c.set(startYear,startMonth,startDay);
         c2.set(endYear, endMonth,endDay);
-        String dataInicio =  "Start "    + df.format(c.getTime()) + "\n";
-        String dataFim =  " End " +  df.format(c2.getTime()) ;
-        txt_inform.setText(dataInicio);
-        txt_inform.append(dataFim);
+        txt_inform.setText(df.format(c.getTime()) + "\n");
+        txt_inform.append( df.format(c2.getTime());
 
     }
