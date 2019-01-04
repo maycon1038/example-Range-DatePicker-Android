@@ -1,6 +1,7 @@
-# SampleRangeDatePicker
+# Range DatePicker
    <img src="SampleRangeDatePicker.jpg" height="400" width="300" title="SampleRangeDatePicker">
- This library allows the selection of two dates for a given period in a RangeDatePicker. You can customize as desired.
+ The DatePicker Range is a library that lets you select two dates for a given date range. You can customize as desired.
+
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
