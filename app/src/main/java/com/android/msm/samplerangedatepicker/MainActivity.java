@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements DateRangePickerFr
                 rangePickerFragment.initialize(MainActivity.this,true);
                 rangePickerFragment.setNameTabHost("Data Início", "Data Fim");
                 rangePickerFragment.showPerido(true);
-                rangePickerFragment.setMaxDate(cd.getTime(), new Date());
+                rangePickerFragment.setMaxDate(new Date(), new Date());
+                rangePickerFragment.setStartDate((cd.get(Calendar.YEAR)),(cd.get(Calendar.MONTH)),(cd.get(Calendar.DAY_OF_MONTH)));
                 rangePickerFragment.show(getSupportFragmentManager(), "MainActivity");
                /* Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements DateRangePickerFr
     @Override
     public void onDateRangeSelected(int startDay, int startMonth, int startYear, int endDay, int endMonth, int endYear) {
        //      work your method here
-        /* DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault());
+         DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault());
         Calendar  c = Calendar.getInstance();
         Calendar c2 = Calendar.getInstance();
         c.set(startYear,startMonth,startDay);
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements DateRangePickerFr
         String dataFim =  " End " +  df.format(c2.getTime()) ;
 
         txt_inform.setText(dataInicio);
-        txt_inform.append(dataFim);*/
+        txt_inform.append(dataFim);
 
     }
 

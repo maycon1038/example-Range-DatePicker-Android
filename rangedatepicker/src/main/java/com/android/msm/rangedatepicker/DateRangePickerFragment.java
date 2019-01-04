@@ -42,6 +42,8 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
     private String nameBtnNegative,nameBtnPositivo;
     private boolean isShowPeriodo;
     private Date startMax, startMin,endMax,endMin;
+    private int startYear = 0,startMonth = -1,startDayOfMonty = 0
+            ,endYear = 0,endMonth = -1,endDayOfMonty = 0;
 
     public DateRangePickerFragment() {
         // Required empty public constructor
@@ -70,12 +72,23 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
         this.nameTabstart = nameTabstart;
         this.nameTabend = nameTabend;
     }
-
     public void setNameButton(String nameBtnNegative,
-                               String nameBtnPositivo) {
+                              String nameBtnPositivo) {
         this.nameBtnNegative = nameBtnNegative;
         this.nameBtnPositivo = nameBtnPositivo;
     }
+    public void setStartDate(int startYear, int startMonth, int startDayOfMonty) {
+        this.startYear = startYear;
+        this.startMonth = startMonth;
+        this.startDayOfMonty = startDayOfMonty;
+    }
+    public void setEndDate(int endYear, int endMonth, int endDayOfMonty) {
+        this.endYear = endYear;
+        this.endMonth = endMonth;
+        this.endDayOfMonty = endDayOfMonty;
+    }
+
+
     public void setMaxDate(Date startMax, Date endMax) {
         this.startMax = startMax;
         this.endMax = endMax;
@@ -88,8 +101,6 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
     public void showPerido(boolean isShowPeriodo) {
         this.isShowPeriodo = isShowPeriodo;
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -124,6 +135,12 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
         }
         if(endMin != null){
             endDatePicker.setMaxDate(endMin.getTime());
+        }
+        if(startYear > 1000 && startMonth >= 0 && startDayOfMonty >= 1){
+            startDatePicker.updateDate(startYear ,startMonth, startDayOfMonty);
+        }
+        if(endYear > 1000 && endMonth >= 0 && endDayOfMonty >= 1){
+            endDatePicker.updateDate(endYear ,endMonth, endDayOfMonty);
         }
 
 
