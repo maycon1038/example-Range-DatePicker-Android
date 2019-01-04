@@ -1,4 +1,5 @@
 # SampleRangeDatePicker
+   <img src="SampleRangeDatePicker.jpg" height="400" width="300" title="SampleRangeDatePicker">
  This library allows the selection of two dates for a given period in a RangeDatePicker. You can customize as desired.
 Add it in your root build.gradle at the end of repositories:
 
