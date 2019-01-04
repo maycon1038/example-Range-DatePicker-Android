@@ -1,6 +1,18 @@
 # SampleRangeDatePicker
  This library allows the selection of two dates for a given period in a RangeDatePicker. You can customize as desired.
+Add it in your root build.gradle at the end of repositories:
 
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.maycon1038:SampleRangeDatePicker:Tag'
+	}
 
 implement DateRangePickerFragment.OnDateRangeSelectedListener in your MainActivity
 
