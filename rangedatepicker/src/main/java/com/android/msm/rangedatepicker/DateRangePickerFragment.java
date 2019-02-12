@@ -116,7 +116,7 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
         }
         startDatePicker = (DatePicker) root.findViewById(R.id.start_date_picker);
         endDatePicker = (DatePicker) root.findViewById(R.id.end_date_picker);
-
+       
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
         tabHost = (TabHost) root.findViewById(R.id.tabHost);
@@ -134,7 +134,7 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
             startDatePicker.setMinDate(startMin.getTime());
         }
         if(endMin != null){
-            endDatePicker.setMaxDate(endMin.getTime());
+            endDatePicker.setMinDate(endMin.getTime());
         }
         if(startYear > 1000 && startMonth >= 0 && startDayOfMonty >= 1){
             startDatePicker.updateDate(startYear ,startMonth, startDayOfMonty);
@@ -147,8 +147,6 @@ public class DateRangePickerFragment extends DialogFragment implements View.OnCl
        // startDatePicker.updateDate(year,month,day);
         final TextView txt = (TextView) root.findViewById(R.id.txt_periodo);//txt_periodo
 
-        endDatePicker = (DatePicker) root.findViewById(R.id.end_date_picker);
-        endDatePicker.setMaxDate(new Date().getTime());
 
        final  DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.getDefault());
 
