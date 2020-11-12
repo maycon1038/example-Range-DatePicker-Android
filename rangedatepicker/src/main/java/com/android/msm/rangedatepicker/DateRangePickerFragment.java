@@ -3,8 +3,7 @@ package com.android.msm.rangedatepicker;
 
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
+import android.os.Bundle; 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TabHost;
 import android.widget.TextView;
+
+import androidx.fragment.app.DialogFragment;
 
 import java.text.DateFormat;
 import java.util.Calendar;
