@@ -19,7 +19,6 @@
     <content url="file://$MODULE_DIR$/../../../rangedatepicker/build/generated/res/resValues/androidTest/debug">
       <sourceFolder url="file://$MODULE_DIR$/../../../rangedatepicker/build/generated/res/resValues/androidTest/debug" type="java-test-resource" generated="true" />
     </content>
-    <content url="file://$MODULE_DIR$/../../../rangedatepicker/build/generated/source/buildConfig/androidTest/debug" />
     <content url="file://$MODULE_DIR$/../../../rangedatepicker/src/androidTest" />
     <content url="file://$MODULE_DIR$/../../../rangedatepicker/src/androidTestDebug" />
     <orderEntry type="jdk" jdkName="Android API 35, extension level 13 Platform" jdkType="Android SDK" />
