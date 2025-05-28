@@ -1,18 +1,40 @@
 apply plugin: 'com.android.library'
 group='com.github.maycon1038'
+apply plugin: 'maven-publish'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                // Configuração para versões mais antigas
+                artifact bundleReleaseAar
+                artifact sourcesJar // Opcional: inclui fontes
 
-android {
-    compileSdk 33
-    defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
+                groupId = 'com.github.maycon1038'
+                artifactId = 'rangedatepicker'
+                version = '1.0.0'
+            }
+        }
     }
+}
+android {
+    compileSdk 35
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 35
+    }
+    namespace 'com.android.msm.rangedatepicker'
 
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-	implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.12.0'
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set('sources')
 }
